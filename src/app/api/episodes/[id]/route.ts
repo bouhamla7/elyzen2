@@ -16,7 +16,7 @@ axios.interceptors.request.use((config) => {
 
 const fetchCData = async (id: string, dub: boolean) => {
   const res = await axios.get(
-    `${process.env.CONSUMET_API}/meta/anilist/episodes/${id}${
+    `https://animetize-api.vercel.app/episodes/${id}${
       dub ? '?dub=true' : ''
     }`
   );
