@@ -4,7 +4,7 @@ import { NextResponse, NextRequest } from 'next/server';
 const fetchGogoAnime = async (episodeId: string) => {
   try {
     const response = await fetch(
-      `${process.env.CONSUMET_API}/meta/anilist/watch/${episodeId}`
+      `https://animetize-api.vercel.app/watch/${episodeId}`
     );
     const data = await response.json();
 
